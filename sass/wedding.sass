@@ -4,7 +4,7 @@
 @import compass/css3/gradient
 
 // colors
-$background-color:    #b4d7f3
+$background-color:    #e2cd76
 $header-color:        #fffdcd
 $header-border-color: darken($header-color, 40%)
 $link-color:          orange
@@ -46,15 +46,8 @@ a
   border: none
   height: 1px
   background: black
-  +radial-gradient(color-stops($rule-color 0, $header-color 350px))
+  +radial-gradient(color-stops($rule-color 0, transparentize($rule-color, 1) 350px))
 
-.penant
-  display: inline-block
-  width: 0
-  height: 0
-  border-left:  20px solid transparent
-  border-right: 20px solid transparent
-  border-top:   80px solid blue
 
 // container for site
 #site
@@ -63,25 +56,17 @@ a
   bottom: 0
   left: 0
   right: 0
-  +linear-gradient(color-stops($background-color, lighten($background-color, 10%)), bottom)
+  +linear-gradient(color-stops($background-color, lighten($background-color, 6%)), bottom)
+
 
 // header
 .header
   position: absolute
-  left: $dx
-  right: $dx
-  top: $header-y
-  +linear-gradient(color-stops($header-color, lighten($header-color, 6%)), bottom)
+  left:  300px
+  right: 300px
+  top: $dy
   padding: $dy
-  height: $header-height
 
-  border-style: dotted
-  border-width: 2px
-  border-color: $header-border-color
-
-  +box-shadow($shadow-color 2px 2px 10px)
-
-.header
   h1, h2, .links
     text-align: center
 
@@ -96,6 +81,25 @@ a
     display: inline
     margin: $dx
 
+
+// penants
+svg.penants
+  position: absolute
+  top: 0
+  height: 400px
+  width: 400px
+  &.left
+    left: 0px
+  &.right
+    right: 0px
+
+  circle
+    fill: none
+
+  path.penant
+    +box-shadow($shadow-color 2px 2px 5px)
+
+
 // main body
 .main
   position: absolute
@@ -107,12 +111,12 @@ a
 .section
   position: absolute
   width: 100%
-  background: $section-color
+  // background: $section-color
   top: 0
   bottom: 0
 
-  +box-shadow($shadow-color 2px 2px 5px)
-  +border-radius(20px)
+  // +box-shadow($shadow-color 2px 2px 5px)
+  // +border-radius(20px)
 
 // individual sections
 #directions
