@@ -111,12 +111,12 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e2cd76), color-stop(100%, #e7d68f));
-  background-image: -webkit-linear-gradient(bottom, #e2cd76, #e7d68f);
-  background-image: -moz-linear-gradient(bottom, #e2cd76, #e7d68f);
-  background-image: -o-linear-gradient(bottom, #e2cd76, #e7d68f);
-  background-image: -ms-linear-gradient(bottom, #e2cd76, #e7d68f);
-  background-image: linear-gradient(bottom, #e2cd76, #e7d68f);
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e2cd76), color-stop(100%, #ebdca0));
+  background-image: -webkit-linear-gradient(bottom, #e2cd76, #ebdca0);
+  background-image: -moz-linear-gradient(bottom, #e2cd76, #ebdca0);
+  background-image: -o-linear-gradient(bottom, #e2cd76, #ebdca0);
+  background-image: -ms-linear-gradient(bottom, #e2cd76, #ebdca0);
+  background-image: linear-gradient(bottom, #e2cd76, #ebdca0);
 }
 
 /* line 63, ../sass/wedding.sass */
@@ -151,7 +151,7 @@ svg.penants {
   position: absolute;
   top: 0;
   height: 400px;
-  width: 400px;
+  width: 450px;
 }
 /* line 91, ../sass/wedding.sass */
 svg.penants.left {
