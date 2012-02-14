@@ -18,7 +18,7 @@ $dy: 20px
 $dx: 20px
 $header-y: $dy
 $header-padding: $dy
-$header-height: 120px
+$header-height: 100px
 
 $header-bottom: $header-y + $header-height + 2*$header-padding
 $main-top: $header-bottom + $dy
@@ -30,6 +30,7 @@ $section-dx: 10px
 html
   color: $text-color
   font-family: helvetica, sans-serif
+  font-size: 18px
 h1
   font-size: 36px
 h2
@@ -40,14 +41,6 @@ a
   text-decoration: none
   &:hover
     text-decoration: underline
-
-.fading_line
-  display: block
-  border: none
-  height: 1px
-  background: black
-  +radial-gradient(color-stops($rule-color 0, transparentize($rule-color, 1) 350px))
-
 
 // container for site
 #site
@@ -74,12 +67,9 @@ a
     margin-top: $dy
     text-align: center
 
-  .fading_line
-    margin: $dy/2 0
-
-  .links li
-    display: inline
-    margin: $dx
+    li
+      display: inline
+      margin: $dx
 
 
 // penants
@@ -110,23 +100,37 @@ svg.penants
 .main
   z-index: 1
   position: absolute
-  left: 100px
-  right: 100px
-  top: $main-top
+  width: 960px
+  margin-left: -520px
+  left: 50%
+  top:    $main-top
   bottom: $main-bottom
-  padding: $dy
+  min-height: 400px
+  padding: 2*$dy
 
   background: $section-color
   +box-shadow($shadow-color 2px 2px 5px)
   +border-radius(20px)
 
 .section
+  line-height: 30px
+  .image-wrapper
+    width: 300px
+    height: 269px
+
+    float: left
+    margin-right:  2*$dy
+    margin-bottom: 2*$dy
+    background: #fef4dd
+    padding: $dy
+    border: 1px solid #c0c0a0
 
 
 // individual sections
 #directions
 
-#story
+#story, #registry
+  display: none
 
 #registry
 

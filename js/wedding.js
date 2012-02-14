@@ -4,6 +4,8 @@ WeddingRouter = Backbone.Router.extend({
   },
 
   showSection: function(sectionName) {
+    $(".section").hide();
+    $("#" + sectionName).show();
   }
 });
 router = new WeddingRouter;
@@ -33,6 +35,12 @@ $(function() {
     fills: ["white1", "yellow1", "red1", "blue1"]
   });
 
+  var data = {
+    left: left,
+    right: right,
+
+  }
+
   _.each([left, right], drawPenants);
 });
 
@@ -54,8 +62,9 @@ function drawPenants(group) {
   _.each(group.angles, function(angle, i) {
     var angles = [angle - group.penantAngle/2, angle, angle + group.penantAngle/2];
     group.container.append("path")
-      .attr("fill", "url(#" + group.fills[i] + ")")
       .classed("penant", true)
+      .style("fill", "url(#" + group.fills[i] + ")")
+      .style("stroke", "#aaa")
       .attr("d", penantOutline(angles));
   });
 }
