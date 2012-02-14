@@ -4,7 +4,6 @@ WeddingRouter = Backbone.Router.extend({
   },
 
   showSection: function(sectionName) {
-    
   }
 });
 router = new WeddingRouter;
@@ -24,14 +23,14 @@ $(function() {
   var left = _.extend({}, params, {
     container: d3.select(".left.penants"),
     cx: -100,
-    fills: ["fabric1", "fabric2", "fabric3"]
+    fills: ["gray1", "green1", "yellow2", "white2"]
   });
 
   var right = _.extend({}, params, {
     container: d3.select(".right.penants"),
     angles: _.map(params.angles, function(x) { return -x }),
     cx: params.width - left.cx,
-    fills: ["fabric4", "fabric5", "fabric6"]
+    fills: ["white1", "yellow1", "red1", "blue1"]
   });
 
   _.each([left, right], drawPenants);
@@ -43,6 +42,7 @@ function drawPenants(group) {
     .attr("cy", group.cy)
     .attr("r", group.r)
     .style("stroke", "#000")
+    .style("stroke-width", 1)
     .classed("rope", true);
 
   var pi = Math.PI;

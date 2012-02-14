@@ -4,7 +4,7 @@
 @import compass/css3/gradient
 
 // colors
-$background-color:    #e2cd76
+$background-color:    #fee8b8
 $header-color:        #fffdcd
 $header-border-color: darken($header-color, 40%)
 $link-color:          orange
@@ -83,7 +83,12 @@ a
 
 
 // penants
+svg.defs
+  height: 0
+  width: 0
+
 svg.penants
+  z-index: 100
   position: absolute
   top: 0
   height: 400px
@@ -97,38 +102,32 @@ svg.penants
     fill: none
 
   path.penant
+    z-index: 100
     +box-shadow($shadow-color 2px 2px 5px)
 
 
 // main body
 .main
+  z-index: 1
   position: absolute
-  left: $dy
-  right: $dy
+  left: 100px
+  right: 100px
   top: $main-top
   bottom: $main-bottom
+  padding: $dy
+
+  background: $section-color
+  +box-shadow($shadow-color 2px 2px 5px)
+  +border-radius(20px)
 
 .section
-  position: absolute
-  width: 100%
-  // background: $section-color
-  top: 0
-  bottom: 0
 
-  // +box-shadow($shadow-color 2px 2px 5px)
-  // +border-radius(20px)
 
 // individual sections
 #directions
-  left: $section-dx*0
-  z-index: 10
 
 #story
-  left: $section-dx*1
-  z-index: 9
 
 #registry
-  left: $section-dx*2
-  z-index: 8
 
 
