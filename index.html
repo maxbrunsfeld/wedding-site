@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,102 +14,194 @@
   <script src="js/libs/underscore.js"></script>
   <script src="js/libs/backbone.js"></script>
   <script src="js/libs/d3.js"></script>
-  <script src="js/wedding.js"></script>
 </head>
 <body>
-  <div id="site">
 
-    <svg class="defs" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-        <defs>
-            <pattern id="gray1" patternUnits="userSpaceOnUse" width="102" height="107">
-                <image xlink:href="img/fabric1.png" x="0" y="0" width="102" height="107"/>
-            </pattern>
-            <pattern id="gray2" patternUnits="userSpaceOnUse" width="83"  height="85">
-                <image xlink:href="img/fabric2.png" x="0" y="0" width="83"  height="85"/>
-            </pattern>
-            <pattern id="white2" patternUnits="userSpaceOnUse" width="88"  height="109">
-                <image xlink:href="img/fabric3.png" x="0" y="0" width="88"  height="109"/>
-            </pattern>
-            <pattern id="green1" patternUnits="userSpaceOnUse" width="300" height="369">
-                <image xlink:href="img/fabric4.jpg" x="0" y="0" width="300" height="369"/>
-            </pattern>
-            <pattern id="white1" patternUnits="userSpaceOnUse" width="800" height="800">
-                <image xlink:href="img/fabric5.jpg" x="0" y="0" width="800" height="800"/>
-            </pattern>
-            <pattern id="yellow1" patternUnits="userSpaceOnUse" width="470" height="403">
-                <image xlink:href="img/fabric6.png" x="0" y="0" width="470" height="403"/>
-            </pattern>
-            <pattern id="red1" patternUnits="userSpaceOnUse" width="400" height="283">
-                <image xlink:href="img/fabric7.jpg" x="0" y="0" width="400" height="283"/>
-            </pattern>
-            <pattern id="blue1" patternUnits="userSpaceOnUse" width="400" height="400">
-                <image xlink:href="img/fabric8.jpg" x="0" y="0" width="400" height="400"/>
-            </pattern>
-            <pattern id="yellow2" patternUnits="userSpaceOnUse" width="470" height="403">
-                <image xlink:href="img/fabric9.png" x="0" y="0" width="470" height="403"/>
-            </pattern>
-            <pattern id="brown1" patternUnits="userSpaceOnUse" width="512" height="344">
-                <image xlink:href="img/fabric10.png" x="0" y="0" width="512" height="344"/>
-            </pattern>
-        </defs>
-    </svg>
+  <div id="background"></div>
 
-    <svg class="left penants"  version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"></svg>
-    <svg class="right penants" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"></svg>
+  <svg class="defs" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+      <defs>
+          <pattern id="gray1" patternUnits="userSpaceOnUse" width="102" height="107">
+              <image xlink:href="img/fabric1.png" x="0" y="0" width="102" height="107"/>
+          </pattern>
+          <pattern id="white2" patternUnits="userSpaceOnUse" width="88"  height="109">
+              <image xlink:href="img/fabric3.png" x="0" y="0" width="88"  height="109"/>
+          </pattern>
+          <pattern id="green1" patternUnits="userSpaceOnUse" width="300" height="369">
+              <image xlink:href="img/fabric4.jpg" x="0" y="0" width="300" height="369"/>
+          </pattern>
+          <pattern id="white1" patternUnits="userSpaceOnUse" width="800" height="800">
+              <image xlink:href="img/fabric5.jpg" x="0" y="0" width="800" height="800"/>
+          </pattern>
+          <pattern id="yellow1" patternUnits="userSpaceOnUse" width="470" height="403">
+              <image xlink:href="img/fabric6.png" x="0" y="0" width="470" height="403"/>
+          </pattern>
+          <pattern id="red1" patternUnits="userSpaceOnUse" width="400" height="283">
+              <image xlink:href="img/fabric7.jpg" x="0" y="0" width="400" height="283"/>
+          </pattern>
+          <pattern id="blue1" patternUnits="userSpaceOnUse" width="400" height="400">
+              <image xlink:href="img/fabric8.jpg" x="0" y="0" width="400" height="400"/>
+          </pattern>
+          <pattern id="yellow2" patternUnits="userSpaceOnUse" width="470" height="403">
+              <image xlink:href="img/fabric9.png" x="0" y="0" width="470" height="403"/>
+          </pattern>
+      </defs>
+  </svg>
 
-    <div class="header">
-      <h1>Alissa and Max</h1>
+  <svg class="left penants"  version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"></svg>
+  <svg class="right penants" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"></svg>
 
-      <h2>May 27, 2012</h2>
+  <div class="header">
+    <h1>Alissa and Max</h1>
 
-      <ul class="links">
-        <li><a href="#story">Our Story</a></li>
-        <li><a href="#directions">Directions</a></li>
-        <li><a href="#registry">Registry</a></li>
-      </ul>
-    </div>
+    <h2>May 27, 2012</h2>
 
-    <div class="main">
-
-      <div id="story" class="section">
-        <div class="image-wrapper">
-          <img src="img/us1a.jpg"/>
-        </div>
-
-        <p>
-          Hello, friends and family! We're getting married! We've been hanging
-          out together for about six years now, and we're so glad you all are
-          going to come and celebrate with us.
-        </p>
-
-        <p>
-          Alissa and Max met the afternoon that Max moved away to college. She was walking
-          down the hall from the laundry room, and something fell out of her basket.
-          Max picked it up for. "Hey you dropped your... umm ... underwear"
-        </p>
-
-      </div>
-
-      <div id="directions" class="section">
-        <div class="image-wrapper">
-          <img src="img/us2a.jpg"/>
-        </div>
-
-      </div>
-
-      <div id="registry" class="section">
-        <!-- <div class="image-wrapper"> -->
-        <!--   <img src="img/us1a.jpg"/> -->
-        <!-- </div> -->
-
-        <a href="http://www.honeyfund.com/wedding/maxandalissa" style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund2.png') no-repeat;display:block;width:200px;height:100px;text-indent:-9999em;">Visit our honeyfund at Honeyfund.com, the free honeymoon registry</a>
-
-      </div>
-    </div>
-
-    <div class="footer">
-    </div>
-
+    <ul class="links">
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#the-wedding">The Wedding</a></li>
+      <li><a href="#rehearsal">Rehearsal BBQ</a></li>
+      <li><a href="#accomodations">Accomodations</a></li>
+      <li><a href="#registry">Registry</a></li>
+    </ul>
   </div>
+
+  <div class="main">
+
+    <div id="welcome" class="section">
+      <div class="photo image-wrapper">
+        <img src="img/us3b.jpg"/>
+      </div>
+
+      <p>
+        Hello, friends and family! We're getting married! We're so glad you all are
+        going to come and celebrate with us.
+      </p>
+
+    </div>
+
+    <div id="story" class="section">
+      <div class="photo image-wrapper">
+        <img src="img/us4a.jpg"/>
+      </div>
+
+      <p>
+        Alissa and Max met the afternoon that Max moved away to college. She was walking
+        down the hall from the laundry room, and something fell out of her basket.
+        Max picked it up for. "Hey you dropped your... umm ... underwear"
+      </p>
+
+    </div>
+
+    <div id="rehearsal" class="section">
+      <div class="photo image-wrapper">
+        <img src="img/stafford.jpg"/>
+      </div>
+
+      <p>
+        Keeping with our down-home wedding style, we are having a "rehearsal" BBQ
+        instead of formal dinner on Saturday, May 26th. The BBQ will be at <a href="http://maps.google.com/maps?q=map+stafford+lake+novato&hl=en&ll=38.078173,-122.617451&spn=0.22404,0.445976&sll=40.089241,-90.206711&sspn=0.435483,0.891953&t=v&gl=us&hnear=Stafford+Lake&z=12">Stafford
+        Lake</a> in Novato, Ca from 2:30-6pm. Our gathering will be catered by "________"
+        with traditional BBQ foods and beverages! Come on out to enjoy the <a href="http://4.bp.blogspot.com/__faeIjFybEU/TGHT7ErkRAI/AAAAAAAAB1A/ohdJ0PzxrEA/s1600/038view.jpg">beautiful
+        scenery</a> and wildlife around the lake, relax in the sun, play some sports and
+        games, eat, drink, and meet new family. The picnic site is highly accessible
+        from the parking lot and has bathrooms close by. We very much would like to
+        make this get-together about getting to know each other and reconnecting with
+        those we have not seen in a long while, so there may just be some group
+        activities to aid in this endeavor! Bring a camp chair if possible (there will
+        be many picnic tables and blankets, however) and, of course, your smiling
+        selves.
+      </p>
+    </div>
+
+    <div id="the-wedding" class="section">
+      <div class="photo image-wrapper">
+        <img src="img/us5a.jpg"/>
+      </div>
+
+      <p>
+        The wedding ceremony and reception will be at the home of the Max's
+        parents, Alice and Michael Brunsfeld in San Rafael, Ca. The Brunsfelds
+        have a lovely home that backs up to an open space preserve (Marin County
+        is famous for these). A trail leads from their beautiful garden backyard
+        up to an oak-covered hill that looks out onto all of north San Rafael.
+        You can even see a bit of the bay. The wedding ceremony
+        will be performed by close friend <a href="img/kevin1.jpg">Kevin Tchamourian</a> on top of this hill.
+        We suggest that women wear flat shoes or low, wider-heeled pumps, as
+        there is five minute walk on the trail up the hill to the ceremony
+        location. The trail, though short and well-kept is indeed inclined.
+      </p>
+
+      <p>
+        The reception will immediately follow the ceremony. Everyone will head
+        back down the hill to the Brunsfeld's garden backyard, where there will
+        be much dancing, eating, drinking and merriment into the evening.
+        Please bring your dancing shoes as we will have a great wood dance
+        floor in place! We will serve an Indian buffet dinner "catered" by the
+        Sobos' restaurant, <a href="http://www.naanoftheabove.com">Naan of the
+          Above</a> (in Arcata, Ca). Vegetarian, vegan, and gluten free options
+        will be available!
+      </p>
+    </div>
+
+    <div id="accomodations" class="section">
+      <p>
+        We have reserved a block of rooms at the <a
+          href="http://embassysuites1.hilton.com/en_US/es/index.do">Embassy
+          Suites</a> in San Rafael, just a few minutes away from the
+        Brunsfelds' home. We will have more information soon.
+      </p>
+    </div>
+
+    <div id="registry" class="section">
+      <!-- <div class="image-wrapper"> -->
+      <!--   <img src="img/us1a.jpg"/> -->
+      <!-- </div> -->
+
+      <p>
+        Thank you very much for considering giving us a wedding gift! We have
+        <em>two gift registry options</em>.
+      </p>
+
+      <a class="honeyfund" href="http://www.honeyfund.com/wedding/maxandalissa"
+        style="text-align:left;background:url('http://www.honeyfund.com/share/honeyfund1.png')
+        no-repeat;display:block;width:200px;height:100px;text-indent:-9999em;">
+        Visit our honeyfund at Honeyfund.com, the free honeymoon registry
+      </a>
+
+      <p>
+        The <em>first option</em> is an online registry called <a
+          href="http://www.honeyfund.com/wedding/maxandalissa">Honeyfund</a>
+        that allows you to help fund our honeymoon travel plans. We are
+        planning a one month long camping trip around the United States in
+        August! Click on the link to visit our personal Honeyfund page to learn
+        more about our honeymoon plans and find out how you can give us a gift
+        that will help make our honeymoon even better! Buy us a bottle of wine
+        during our trip, help us get the camping gear we still need, upgrade us
+        to the honeymoon suite when we venture into cities, or  treat us to a
+        picnic lunch in Yellowstone National Park.
+      </p>
+
+      <a class="image-wrapper" href="http://www.williams-sonoma.com/registry/2963247/registry-list.html">
+        <!-- <img src="img/williams-sonoma-logo.png"/> -->
+        <img src="img/ws-logo.gif"/>
+        <!-- <div class='reg'>Registry</div> -->
+        <!-- Williams-Sonoma Registry -->
+      </a>
+
+      <p>
+        The <em>second option</em> is a classic gift registry for guest who
+        would prefer to bring us a physical gift. We have registered at
+        <a href="http://www.williams-sonoma.com/registry/2963247/registry-list.html">Williams-Sonoma</a>.
+        Follow the link or look it up in-store under Alissa Sobo or Max
+        Brunsfeld.
+      </p>
+
+    </div>
+
+    <div class="clear"></div>
+  </div>
+
+  <script src="js/wedding.js"></script>
 </body>
 </html>

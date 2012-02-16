@@ -4,10 +4,14 @@ WeddingRouter = Backbone.Router.extend({
   },
 
   showSection: function(sectionName) {
+    sectionName || (sectionName = "welcome");
     $(".section").hide();
-    $("#" + sectionName).show();
+    $(".links a").removeClass("selected");
+    $(".links a[href='#" + sectionName + "']").addClass("selected");
+    $(".section#" + sectionName).show();
   }
 });
+
 router = new WeddingRouter;
 Backbone.history.start();
 
@@ -15,10 +19,10 @@ Backbone.history.start();
 $(function() {
   var params = {
     angles: [12, 24, 36, 48],
-    cy: -400,
-    r: 600,
-    penantLength: 110,
-    penantAngle: 11,
+    cy: -350,
+    r: 500,
+    penantLength: 90,
+    penantAngle: 10,
     width: parseInt($("svg.penants").css("width"))
   };
 

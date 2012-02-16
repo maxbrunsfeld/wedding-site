@@ -41,25 +41,30 @@ a
   text-decoration: none
   &:hover
     text-decoration: underline
+em
+  font-weight: bold
+p
+  margin-bottom: $dy
+.clear
+  clear: both
 
 // container for site
-#site
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  +linear-gradient(color-stops($background-color, lighten($background-color, 10%)), bottom)
-  min-height: 600px
+body
   font-family: 'Junge', serif
+
+#background
+  z-index: -100
+  position: fixed
+  height: 100%
+  width: 100%
+  overflow: visible
+  +linear-gradient(color-stops($background-color, lighten($background-color, 10%)), bottom)
 
 
 // header
 .header
-  position: absolute
-  left:  300px
-  right: 300px
-  top: $dy
+  width: 960px
+  margin: $dy auto
   padding: $dy
 
   h1, h2, .links
@@ -83,8 +88,9 @@ svg.penants
   z-index: 100
   position: absolute
   top: 0
-  height: 300px
-  width: 450px
+  height: 280px
+  width: 380px
+  pointer-events: none
   &.left
     left: 0px
   &.right
@@ -98,15 +104,14 @@ svg.penants
     +box-shadow($shadow-color 2px 2px 5px)
 
 
+.links
+  a.selected
+    color: #fd0100
+
 // main body
 .main
-  z-index: 1
-  position: absolute
   width: 960px
-  margin-left: -520px
-  left: 50%
-  top:    $main-top
-  bottom: $main-bottom
+  margin: $dy auto
   padding: 2*$dy
 
   background: $section-color
@@ -116,15 +121,14 @@ svg.penants
 .section
   line-height: 30px
   .image-wrapper
-    width: 300px
-    height: 269px
-
     float: left
-    margin-right:  2*$dy
+    margin-right: $dy
     margin-bottom: 2*$dy
-    background: #fef4dd
-    padding: $dy
-    border: 1px solid #c0c0a0
+    &.photo
+      margin-right:  2*$dy
+      background: #fef4dd
+      padding: $dy
+      border: 1px solid #c0c0a0
 
 
 // individual sections
@@ -134,5 +138,10 @@ svg.penants
   display: none
 
 #registry
+  .honeyfund
+    float: left
+    margin: $dy
+    margin-left: 0
+  .williams
 
 

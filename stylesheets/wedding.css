@@ -91,73 +91,90 @@ a:hover {
   text-decoration: underline;
 }
 
+/* line 44, ../sass/wedding.sass */
+em {
+  font-weight: bold;
+}
+
 /* line 46, ../sass/wedding.sass */
-#site {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+p {
+  margin-bottom: 20px;
+}
+
+/* line 48, ../sass/wedding.sass */
+.clear {
+  clear: both;
+}
+
+/* line 52, ../sass/wedding.sass */
+body {
+  font-family: "Junge", serif;
+}
+
+/* line 55, ../sass/wedding.sass */
+#background {
+  z-index: -100;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fee8b8), color-stop(100%, #fff8ea));
   background-image: -webkit-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: -moz-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: -o-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: -ms-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: linear-gradient(bottom, #fee8b8, #fff8ea);
-  min-height: 600px;
-  font-family: "Junge", serif;
 }
 
-/* line 58, ../sass/wedding.sass */
+/* line 65, ../sass/wedding.sass */
 .header {
-  position: absolute;
-  left: 300px;
-  right: 300px;
-  top: 20px;
+  width: 960px;
+  margin: 20px auto;
   padding: 20px;
 }
-/* line 65, ../sass/wedding.sass */
+/* line 70, ../sass/wedding.sass */
 .header h1, .header h2, .header .links {
   text-align: center;
 }
-/* line 68, ../sass/wedding.sass */
+/* line 73, ../sass/wedding.sass */
 .header .links {
   margin-top: 20px;
   text-align: center;
 }
-/* line 72, ../sass/wedding.sass */
+/* line 77, ../sass/wedding.sass */
 .header .links li {
   display: inline;
   margin: 20px;
 }
 
-/* line 78, ../sass/wedding.sass */
+/* line 83, ../sass/wedding.sass */
 svg.defs {
   height: 0;
   width: 0;
 }
 
-/* line 82, ../sass/wedding.sass */
+/* line 87, ../sass/wedding.sass */
 svg.penants {
   z-index: 100;
   position: absolute;
   top: 0;
-  height: 300px;
-  width: 450px;
+  height: 280px;
+  width: 380px;
+  pointer-events: none;
 }
-/* line 88, ../sass/wedding.sass */
+/* line 94, ../sass/wedding.sass */
 svg.penants.left {
   left: 0px;
 }
-/* line 90, ../sass/wedding.sass */
+/* line 96, ../sass/wedding.sass */
 svg.penants.right {
   right: 0px;
 }
-/* line 93, ../sass/wedding.sass */
+/* line 99, ../sass/wedding.sass */
 svg.penants circle {
   fill: none;
 }
-/* line 96, ../sass/wedding.sass */
+/* line 102, ../sass/wedding.sass */
 svg.penants path.penant {
   z-index: 100;
   -moz-box-shadow: #444444 2px 2px 5px;
@@ -166,15 +183,15 @@ svg.penants path.penant {
   box-shadow: #444444 2px 2px 5px;
 }
 
-/* line 102, ../sass/wedding.sass */
+/* line 108, ../sass/wedding.sass */
+.links a.selected {
+  color: #fd0100;
+}
+
+/* line 112, ../sass/wedding.sass */
 .main {
-  z-index: 1;
-  position: absolute;
   width: 960px;
-  margin-left: -520px;
-  left: 50%;
-  top: 180px;
-  bottom: 20px;
+  margin: 20px auto;
   padding: 40px;
   background: #fffeec;
   -moz-box-shadow: #444444 2px 2px 5px;
@@ -189,23 +206,32 @@ svg.penants path.penant {
   border-radius: 20px;
 }
 
-/* line 116, ../sass/wedding.sass */
+/* line 121, ../sass/wedding.sass */
 .section {
   line-height: 30px;
 }
-/* line 118, ../sass/wedding.sass */
+/* line 123, ../sass/wedding.sass */
 .section .image-wrapper {
-  width: 300px;
-  height: 269px;
   float: left;
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 40px;
+}
+/* line 127, ../sass/wedding.sass */
+.section .image-wrapper.photo {
+  margin-right: 40px;
   background: #fef4dd;
   padding: 20px;
   border: 1px solid #c0c0a0;
 }
 
-/* line 133, ../sass/wedding.sass */
+/* line 137, ../sass/wedding.sass */
 #story, #registry {
   display: none;
+}
+
+/* line 141, ../sass/wedding.sass */
+#registry .honeyfund {
+  float: left;
+  margin: 20px;
+  margin-left: 0;
 }
