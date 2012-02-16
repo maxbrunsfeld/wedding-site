@@ -104,9 +104,11 @@ a:hover {
   background-image: -o-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: -ms-linear-gradient(bottom, #fee8b8, #fff8ea);
   background-image: linear-gradient(bottom, #fee8b8, #fff8ea);
+  min-height: 600px;
+  font-family: "Junge", serif;
 }
 
-/* line 56, ../sass/wedding.sass */
+/* line 58, ../sass/wedding.sass */
 .header {
   position: absolute;
   left: 300px;
@@ -114,48 +116,48 @@ a:hover {
   top: 20px;
   padding: 20px;
 }
-/* line 63, ../sass/wedding.sass */
+/* line 65, ../sass/wedding.sass */
 .header h1, .header h2, .header .links {
   text-align: center;
 }
-/* line 66, ../sass/wedding.sass */
+/* line 68, ../sass/wedding.sass */
 .header .links {
   margin-top: 20px;
   text-align: center;
 }
-/* line 70, ../sass/wedding.sass */
+/* line 72, ../sass/wedding.sass */
 .header .links li {
   display: inline;
   margin: 20px;
 }
 
-/* line 76, ../sass/wedding.sass */
+/* line 78, ../sass/wedding.sass */
 svg.defs {
   height: 0;
   width: 0;
 }
 
-/* line 80, ../sass/wedding.sass */
+/* line 82, ../sass/wedding.sass */
 svg.penants {
   z-index: 100;
   position: absolute;
   top: 0;
-  height: 400px;
+  height: 300px;
   width: 450px;
 }
-/* line 86, ../sass/wedding.sass */
+/* line 88, ../sass/wedding.sass */
 svg.penants.left {
   left: 0px;
 }
-/* line 88, ../sass/wedding.sass */
+/* line 90, ../sass/wedding.sass */
 svg.penants.right {
   right: 0px;
 }
-/* line 91, ../sass/wedding.sass */
+/* line 93, ../sass/wedding.sass */
 svg.penants circle {
   fill: none;
 }
-/* line 94, ../sass/wedding.sass */
+/* line 96, ../sass/wedding.sass */
 svg.penants path.penant {
   z-index: 100;
   -moz-box-shadow: #444444 2px 2px 5px;
@@ -164,7 +166,7 @@ svg.penants path.penant {
   box-shadow: #444444 2px 2px 5px;
 }
 
-/* line 100, ../sass/wedding.sass */
+/* line 102, ../sass/wedding.sass */
 .main {
   z-index: 1;
   position: absolute;
@@ -173,7 +175,6 @@ svg.penants path.penant {
   left: 50%;
   top: 180px;
   bottom: 20px;
-  min-height: 400px;
   padding: 40px;
   background: #fffeec;
   -moz-box-shadow: #444444 2px 2px 5px;
@@ -188,11 +189,11 @@ svg.penants path.penant {
   border-radius: 20px;
 }
 
-/* line 115, ../sass/wedding.sass */
+/* line 116, ../sass/wedding.sass */
 .section {
   line-height: 30px;
 }
-/* line 117, ../sass/wedding.sass */
+/* line 118, ../sass/wedding.sass */
 .section .image-wrapper {
   width: 300px;
   height: 269px;
@@ -204,7 +205,7 @@ svg.penants path.penant {
   border: 1px solid #c0c0a0;
 }
 
-/* line 132, ../sass/wedding.sass */
+/* line 133, ../sass/wedding.sass */
 #story, #registry {
   display: none;
 }

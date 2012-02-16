@@ -35,12 +35,6 @@ $(function() {
     fills: ["white1", "yellow1", "red1", "blue1"]
   });
 
-  var data = {
-    left: left,
-    right: right,
-
-  }
-
   _.each([left, right], drawPenants);
 });
 

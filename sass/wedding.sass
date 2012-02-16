@@ -50,6 +50,8 @@ a
   left: 0
   right: 0
   +linear-gradient(color-stops($background-color, lighten($background-color, 10%)), bottom)
+  min-height: 600px
+  font-family: 'Junge', serif
 
 
 // header
@@ -81,7 +83,7 @@ svg.penants
   z-index: 100
   position: absolute
   top: 0
-  height: 400px
+  height: 300px
   width: 450px
   &.left
     left: 0px
@@ -105,7 +107,6 @@ svg.penants
   left: 50%
   top:    $main-top
   bottom: $main-bottom
-  min-height: 400px
   padding: 2*$dy
 
   background: $section-color
