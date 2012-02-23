@@ -12,7 +12,7 @@ WeddingRouter = Backbone.Router.extend({
   }
 });
 
-router = new WeddingRouter;
+router = new WeddingRouter();
 Backbone.history.start();
 
 
@@ -23,18 +23,18 @@ $(function() {
     r: 500,
     penantLength: 90,
     penantAngle: 10,
-    width: parseInt($("svg.penants").css("width"))
+    width: parseInt($("svg.penant-group").css("width"), 10)
   };
 
   var left = _.extend({}, params, {
-    container: d3.select(".left.penants"),
+    container: d3.select(".left.penant-group"),
     cx: -100,
     fills: ["gray1", "green1", "yellow2", "white2"]
   });
 
   var right = _.extend({}, params, {
-    container: d3.select(".right.penants"),
-    angles: _.map(params.angles, function(x) { return -x }),
+    container: d3.select(".right.penant-group"),
+    angles: _.map(params.angles, function(x) { return -x; }),
     cx: params.width - left.cx,
     fills: ["white1", "yellow1", "red1", "blue1"]
   });
@@ -65,4 +65,7 @@ function drawPenants(group) {
       .style("stroke", "#aaa")
       .attr("d", penantOutline(angles));
   });
+
+  // d3.selectAll("penant-group")
+  //   .data(".penant-group")
 }
